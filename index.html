@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystal Collector</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1 class="display-1">Crystals Collector</h1>
+
+	<section id="instructions">
+	<p>You will be given a random number at the start of the game.</p>
+	<p>Each time you click on one of the crystals below, you will be given a specific number points. These points will be added to your total score.</p>
+	<p>In order to win the game, your total score needs to equal the random number. If your total score is higher than the random number, you will lose and the game will restart. If your total score is less than the random number, you can continue clicking on the crystals.</p>
+	<p>The value of each crystal is hidden from you until you click on it.</p>
+	<p>Each time the game restarts, the values of the crystals will change.</p>
+	</section>
+
+	
+	<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+	  <div class="card-body">
+	    <h4 class="card-title">Random Number will go here</h4>
+	  </div>
+	</div>
+
+	<div id="scoreboard" class="card text-white bg-warning mb-3" style="max-width: 10rem;">
+	  <div class="card-body">
+	    <p class="card-text">Wins: </p>
+	    <p class="card-text">Losses:</p>
+	  </div>
+	</div>	
+
+	
+	<div class="crystals">
+
+	<h2>Crystals</h2>
+	<img src="assets/images/Red.jpg" class="img-thumbnail rounded float-left crystalImages" id="red">
+	<img src="assets/images/Blue.jpg" class="img-thumbnail rounded float-left crystalImages" id="blue">
+	<img src="assets/images/Yellow.png" class="img-thumbnail rounded float-left crystalImages" id="yellow">
+	<img src="assets/images/Green.png" class="img-thumbnail rounded float-left crystalImages" id="green">
+	</div>
+
+	<div id="score" class="card text-white bg-success mb-3" style="max-width: 20rem;">
+	  <div class="card-body">
+	    <h4 class="card-title">Total Score: </h4>
+	  </div>
+	</div>
+
+	<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+	<div class="card-body">
+	 <p id="running-score" class="card-text"></p>
+	</div>
+	</div>
+
+
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
