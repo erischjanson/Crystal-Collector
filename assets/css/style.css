@@ -1,0 +1,24 @@
+.display-1{
+	background-color: orange;
+	width: 60%;
+}
+
+
+#instructions{
+	background-color: #fae4cd;
+}
+
+#running-score{
+	height: 100px;
+}
+
+#score{
+	clear:both;
+}
+
+.crystalImages{
+	height: 180px;
+	width: 180px;
+	margin: 10px;
+
+}
