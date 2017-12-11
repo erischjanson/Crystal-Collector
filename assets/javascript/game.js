@@ -59,47 +59,118 @@ $(document).ready(function(){
 
 var hiddenNumber;
 var userScoreCounter;
-var crystalOne;
-var crystalTwo;
-var crystalThree;
-var crystalFour;
+var red;
+var blue;
+var yellow;
+var green;
 var wins;
 var losses;
 
+function randomNumber(){
+	var randomNumber=  Math.floor((Math.random() * 100) + 1);
+	return randomNumber;
+	
+}
 function resetGame(){
 	userScoreCounter=0;
+	$("#running-score").empty();
 	hiddenNumber=randomNumber();
+	crystalNumbers();
+	//function to generate a random number for each crystal. this number will become the value attribute of it
 
 }
 //initializeGame function here
 
 //function that will generate a random number between 1-100 and returns the number.
-function randomNumber(){
-	var randomNumber=  Math.floor((Math.random() * 100) + 1);
-	return randomNumber;
-	console.log(randomNumber);
-}
+
+
+hiddenNumber=randomNumber();
+console.log(hiddenNumber);
+$("#randomNumber").text(hiddenNumber);
+//randomNumber();
+
+console.log(hiddenNumber);
+//Assign random number between 1-10 to each crystal.
+//This value needs to be added as a value attribute?
+function crystalNumbers(){
+	red=Math.floor((Math.random() * 10) + 1);
+	blue=Math.floor((Math.random() * 10) + 1);
+	yellow=Math.floor((Math.random() * 10) + 1);
+	green=Math.floor((Math.random() * 10) + 1);
  
+}
 
+crystalNumbers();
 
-
+console.log(red);
+console.log(green);
 
 //add onclick listener to all four crystals. 
-	//this function should generate a random number
+	
 	//it should check whether the userscore equals the random number
-	//if not, then it should add the number to the total score
-	//i.e. crystals class is clicked. if crystal 1, clicked, take value and
+	//if not, then it should add the number to the total score and the total score text should display
+userScoreCounter=0;
+
+
 
 $("#green").on("click", function(){
-	alert("working!");
+	userScoreCounter=userScoreCounter+green;
+	$("#running-score").text(userScoreCounter);
+	checkWin();
+	console.log(userScoreCounter);
 })
 
-//onclick event for crystal 1
-	//
+$("#red").on("click", function(){
+	userScoreCounter=userScoreCounter+red;
+	$("#running-score").text(userScoreCounter);
+	checkWin();
+	
+})
+
+$("#blue").on("click", function(){
+	userScoreCounter=userScoreCounter+blue;
+	$("#running-score").text(userScoreCounter);
+	checkWin();
+})
+
+$("#yellow").on("click", function(){
+	userScoreCounter=userScoreCounter+yellow;
+	$("#running-score").text(userScoreCounter);
+	checkWin();
+})
 
 
 
+function checkWin(){
 
+	if (userScoreCounter > hiddenNumber){
+		losses++;
+		alert("Sorry, you lost!");
+		$("#losses").text(losses);
+		resetGame();
 
-			 
+	}
+
+	if (userScoreCounter===hiddenNumber){
+		wins++;
+		alert("Yay, you won!");
+		$("#wins").text(wins);
+		resetGame();
+	}
+}
+//win function that will increment the wins and reset game
+/*function win(){
+	wins++;
+	$("#wins").text(wins);
+	resetGame();
+}
+
+//loss function that will increment the losses and reset game
+function loss(){
+	losses++;
+	$("#losses").text(losses);
+	resetGame();
+}
+*/
+
 });

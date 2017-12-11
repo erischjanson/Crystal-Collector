@@ -1,11 +1,16 @@
-.display-1{
+#heading{
 	background-color: orange;
 	width: 60%;
+	margin-left: 10px;
 }
 
+#content-wrapper{
+	margin-left: 10px;
+}
 
 #instructions{
 	background-color: #fae4cd;
+	width: 60%;
 }
 
 #running-score{
@@ -14,6 +19,19 @@
 
 #score{
 	clear:both;
+}
+
+#randomNumber{
+	float:left;
+	height: 180px;
+	width: 250px;
+	font-size: 24px;
+	font-weight: bold; 
+}
+
+#scoreboard{
+	height: 180px;
+
 }
 
 .crystalImages{
