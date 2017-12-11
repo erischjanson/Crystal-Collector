@@ -9,7 +9,9 @@
 </head>
 <body>
 
-	<h1 class="display-1">Crystals Collector</h1>
+	<h1 id="heading" class="display-1">Crystals Collector</h1>
+
+	<div id="content-wrapper">
 
 	<section id="instructions">
 	<p>You will be given a random number at the start of the game.</p>
@@ -20,7 +22,7 @@
 	</section>
 
 	
-	<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+	<div id="randomNumber" class="card text-white bg-info mb-3" style="max-width: 20rem;">
 	  <div class="card-body">
 	    <h4 class="card-title">Random Number will go here</h4>
 	  </div>
@@ -28,8 +30,8 @@
 
 	<div id="scoreboard" class="card text-white bg-warning mb-3" style="max-width: 10rem;">
 	  <div class="card-body">
-	    <p class="card-text">Wins: </p>
-	    <p class="card-text">Losses:</p>
+	    <p id="wins" class="card-text">Wins: </p>
+	    <p id="losses" class="card-text">Losses:</p>
 	  </div>
 	</div>	
 
@@ -37,10 +39,10 @@
 	<div class="crystals">
 
 	<h2>Crystals</h2>
-	<img src="assets/images/Red.jpg" class="img-thumbnail rounded float-left crystalImages" id="red">
-	<img src="assets/images/Blue.jpg" class="img-thumbnail rounded float-left crystalImages" id="blue">
-	<img src="assets/images/Yellow.png" class="img-thumbnail rounded float-left crystalImages" id="yellow">
-	<img src="assets/images/Green.png" class="img-thumbnail rounded float-left crystalImages" id="green">
+	<img src="assets/images/Red.jpg" alt="Red" class="img-thumbnail rounded float-left crystalImages" id="red" value=red>
+	<img src="assets/images/Blue.jpg" alt="Blue" class="img-thumbnail rounded float-left crystalImages" id="blue">
+	<img src="assets/images/Yellow.png" alt="Yellow" class="img-thumbnail rounded float-left crystalImages" id="yellow">
+	<img src="assets/images/Green.png" alt="Green" class="img-thumbnail rounded float-left crystalImages" id="green">
 	</div>
 
 	<div id="score" class="card text-white bg-success mb-3" style="max-width: 20rem;">
@@ -51,10 +53,10 @@
 
 	<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
 	<div class="card-body">
-	 <p id="running-score" class="card-text"></p>
+	 <p id="running-score" class="card-text">Total Score will go here</p>
 	</div>
 	</div>
-
+	</div>
 
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
