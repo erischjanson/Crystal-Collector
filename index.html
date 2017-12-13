@@ -14,7 +14,7 @@
 	<div id="content-wrapper">
 
 	<section id="instructions">
-	<p>You will be given a random number at the start of the game.</p>
+	<p elizabeth="woman">You will be given a random number at the start of the game.</p>
 	<p>Each time you click on one of the crystals below, you will be given a specific number points. These points will be added to your total score.</p>
 	<p>In order to win the game, your total score needs to equal the random number. If your total score is higher than the random number, you will lose and the game will restart. If your total score is less than the random number, you can continue clicking on the crystals.</p>
 	<p>The value of each crystal is hidden from you until you click on it.</p>
@@ -30,8 +30,8 @@
 
 	<div id="scoreboard" class="card text-white bg-warning mb-3" style="max-width: 10rem;">
 	  <div class="card-body">
-	    <p id="wins" class="card-text">Wins: </p>
-	    <p id="losses" class="card-text">Losses:</p>
+	    <p class="card-text">Wins: <span id="wins"></span></p>
+	    <p class="card-text">Losses: <span id="losses"></span></p>
 	  </div>
 	</div>	
 
@@ -39,7 +39,7 @@
 	<div class="crystals">
 
 	<h2>Crystals</h2>
-	<img src="assets/images/Red.jpg" alt="Red" class="img-thumbnail rounded float-left crystalImages" id="red" value=red>
+	<img src="assets/images/Red.jpg" alt="Red" class="img-thumbnail rounded float-left crystalImages" id="red" value="red">
 	<img src="assets/images/Blue.jpg" alt="Blue" class="img-thumbnail rounded float-left crystalImages" id="blue">
 	<img src="assets/images/Yellow.png" alt="Yellow" class="img-thumbnail rounded float-left crystalImages" id="yellow">
 	<img src="assets/images/Green.png" alt="Green" class="img-thumbnail rounded float-left crystalImages" id="green">
@@ -53,7 +53,7 @@
 
 	<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
 	<div class="card-body">
-	 <p id="running-score" class="card-text">Total Score will go here</p>
+	 <p id="running-score" class="card-text"></p>
 	</div>
 	</div>
 	</div>
